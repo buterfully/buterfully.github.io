@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>面向对象基础 | Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="面向对象基础类与对象 在java中，必须先设计类,才能获得对象  1234public class Phone&amp;#123;	成员变量	成员属性&#x2F;&#x2F;行为&amp;#125;   成员变量 成员方法  1234color &#x3D;&quot;蓝色&quot;;&#x2F;&#x2F;成员变量public void move()&amp;#123;&#x2F;&#x2F;成员方法System.out.println(&quot;流动方式&quot;)；&amp;#125;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象基础">
+<meta property="og:url" content="https://buterfully.github.io/2024/03/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80-1/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="面向对象基础类与对象 在java中，必须先设计类,才能获得对象  1234public class Phone&amp;#123;	成员变量	成员属性&#x2F;&#x2F;行为&amp;#125;   成员变量 成员方法  1234color &#x3D;&quot;蓝色&quot;;&#x2F;&#x2F;成员变量public void move()&amp;#123;&#x2F;&#x2F;成员方法System.out.println(&quot;流动方式&quot;)；&amp;#125;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-03-21T12:54:02.893Z">
+<meta property="article:modified_time" content="2024-03-21T12:58:16.769Z">
+<meta property="article:author" content="buterfully">
+<meta property="article:tag" content="none">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">My Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://buterfully.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-面向对象基础-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80-1/" class="article-date">
+  <time class="dt-published" datetime="2024-03-21T12:54:02.893Z" itemprop="datePublished">2024-03-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      面向对象基础
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="面向对象基础"><a href="#面向对象基础" class="headerlink" title="面向对象基础"></a>面向对象基础</h1><h3 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h3><ul>
+<li>在java中，必须先设计类,才能获得对象</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public class Phone&#123;</span><br><span class="line">	成员变量</span><br><span class="line">	成员属性//行为</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>成员变量 成员方法</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">color =&quot;蓝色&quot;;//成员变量</span><br><span class="line">public void move()&#123;//成员方法</span><br><span class="line">System.out.println(&quot;流动方式&quot;)；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>调用成员变量需要实例化对象</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">phone p =new phone()</span><br><span class="line">p.color;</span><br><span class="line">p.move();</span><br></pre></td></tr></table></figure>
+
+<p>注：一个文件中可以创建多个类，但只有一个类能有public所修饰</p>
+<hr>
+<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><p>对象代表什么,就得封装对应的数据，并提供数据对应的行为</p>
+<ul>
+<li><p>private关键字</p>
+<ul>
+<li><p>是一个权限修饰符</p>
+</li>
+<li><p>可以修饰成员（成员变量与成员方法）</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>注：被private修饰的成员只能在本类中才能访问</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class GirlFriend</span><br><span class="line">&#123;</span><br><span class="line">  	private String name;</span><br><span class="line">	private int age;</span><br><span class="line">		...属性</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GirlFriend p=new GirlFriend();</span><br><span class="line">p.age;//被private修饰，外部访问不到，而赋值错误的会报错</span><br></pre></td></tr></table></figure>
+
+
+
+<p>针对于每一个私有化的变量，都需要提供<strong>get</strong>和<strong>set</strong>方法</p>
+<ul>
+<li>set方法<ul>
+<li>给成员变量赋值</li>
+</ul>
+</li>
+<li>get方法<ul>
+<li>对外提供成员变量的值</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class  GirlFriend&#123;</span><br><span class="line">private int age;</span><br><span class="line">public void setAge(int a)&#123;</span><br><span class="line">	if(a&gt;18 &amp;&amp; a&lt;40)&#123;</span><br><span class="line">		age=a;</span><br><span class="line">	System.out.println(a);</span><br><span class="line">	&#125;else&#123;</span><br><span class="line">	System.out.println(&quot;非法&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;//set方法</span><br><span class="line">	public void getAge()&#123;</span><br><span class="line">	return age;</span><br><span class="line">&#125;//get方法</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="局部变量与成员变量"><a href="#局部变量与成员变量" class="headerlink" title="局部变量与成员变量"></a>局部变量与成员变量</h3><ul>
+<li>当局部变量名与成员变量名相同时,采用<strong>就近原则</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class  GirlFriend&#123;</span><br><span class="line">	private int age;</span><br><span class="line">	public void method()&#123;</span><br><span class="line">	int age=10;</span><br><span class="line">System.out.println(age);</span><br><span class="line">System.out.println(this.age);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>猜一猜该输出的结果为分别为什么呢？</p>
+<p>下面我们来揭晓答案</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(age);//10</span><br><span class="line">System.out.println(this.age);//本类的成员变量0</span><br></pre></td></tr></table></figure>
+
+<p>在类中，<strong>方法体外</strong>的为<strong>成员变量</strong></p>
+<p>在类中，<strong>方法体内</strong>的为<strong>局部变量</strong></p>
+<p>当成员变量与局部变量名字相同时在调用该方法中的成员变量时，局部变量的优先级高于成员变量，采用<strong>就近原则</strong>输出结果</p>
+<hr>
+<h3 id="this关键字"><a href="#this关键字" class="headerlink" title="this关键字"></a>this关键字</h3><p>就近原则</p>
+<p>​		若全局变量与局部变量命名相同时，输出时，以最近的那个变量为依据输出即可。</p>
+<table>
+<thead>
+<tr>
+<th>区别</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>System.out.println(age);</td>
+<td>以局部变量优先</td>
+</tr>
+<tr>
+<td>System.out.println(this.age);</td>
+<td>在本类中寻找此变量输出</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>advantage:</p>
+<p>​						区别成员变量和成员变量</p>
+</li>
+</ul>
+<hr>
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>1.构造方法</p>
+<ul>
+<li><p>特点：</p>
+</li>
+<li><ul>
+<li>构造方法无返回值,也不能为void</li>
+</ul>
+</li>
+<li><ul>
+<li>构造方法的名称要与本类名称完全相同</li>
+</ul>
+</li>
+<li><ul>
+<li>构造方法的作用是用来给成员变量初始化的</li>
+</ul>
+</li>
+<li><ul>
+<li>构造方法中不能使用return</li>
+</ul>
+</li>
+</ul>
+<p>2.构造方法格式</p>
+<ul>
+<li><strong>无参构造方法</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修饰符 class 类名()&#123;</span><br><span class="line">	//方法体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>有参构造方法</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修饰符 class 类名()&#123;</span><br><span class="line">	//this([参数])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<p>![](C:\Users\35176\Desktop\屏幕截图 2024-03-18 214733.png)</p>
+<p>:ear::ear::ear:</p>
+<p>注：</p>
+<p>1.无类的参数时，java虚拟机会自动帮我们创建一个无参构造方法 </p>
+<p>2.若类中出现有参的构造方法了，系统不会再帮我们创建无参构造方法了</p>
+<p>3.使用过程中,一般我们既要写无参的构造方法也要写有参的构造方法</p>
+<hr>
+<h3 id="static关键字"><a href="#static关键字" class="headerlink" title="static关键字"></a>static关键字</h3><p>1.条件：区分类与对象的</p>
+<p>2.使用:</p>
+<ul>
+<li><ul>
+<li>static修饰的成员为类成员，静态成员(被所有的对象共享)</li>
+</ul>
+</li>
+<li><p>格式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">static 类型 变量名;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调用方法</p>
+</li>
+<li><pre><code>类名.静态变量;
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">* * 未被static修饰的成员为对象，非静态成员</span><br><span class="line"></span><br><span class="line">* 格式</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+类型 变量名;
+    修饰符 返回值类型 方法名 &#123;
+        //方法体
+&#125;
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 调用方法:</span><br><span class="line"></span><br><span class="line">* ```</span><br><span class="line">  类名 对象名 = new 类名();//实例化</span><br><span class="line">  对象名.成员名;</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+<p>注：是否+static关键字取决于该变量是否具有唯一性</p>
+<ul>
+<li><p>具有唯一性 不加该关键字</p>
+</li>
+<li><p>不具有唯一性 可以加入该关键字</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://buterfully.github.io/2024/03/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80-1/" data-id="clu18naxo0000nsp988zmch6p" data-title="面向对象基础" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/none/" rel="tag">none</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/02/25/%E5%91%A8%E6%8A%A5-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">周报</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/none/" rel="tag">none</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/none/" style="font-size: 10px;">none</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/03/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80-1/">面向对象基础</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/25/%E5%91%A8%E6%8A%A5-2/">周报</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/05/%E5%91%A8%E6%8A%A5-1/">周报</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/23/%E5%91%A8%E6%8A%A5/">周报</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 buterfully<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
