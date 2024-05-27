@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>web之精灵图与字体图标的使用 | Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="精灵图sprite 为什么会有精灵图的出现呢？ ​		在一个网页中，我们会用到各式各样的图片  服务器会频繁地接收和发送请求图片，服务器加载速度会变慢  实质 多张小的背景图片合并为一张大图片  原理多个图片放在一个图片中 服务器端只需接收一次 就能得到多个小图片 特点 对简单的背景图设置  降低服务器的压力   过程 导入精灵图  移动背景图片位置：background-position（x,y">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web之精灵图与字体图标的使用">
+<meta property="og:url" content="https://buterfully.github.io/2024/05/27/web%E4%B9%8B%E7%B2%BE%E7%81%B5%E5%9B%BE%E4%B8%8E%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87%E7%9A%84%E4%BD%BF%E7%94%A8-1/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="精灵图sprite 为什么会有精灵图的出现呢？ ​		在一个网页中，我们会用到各式各样的图片  服务器会频繁地接收和发送请求图片，服务器加载速度会变慢  实质 多张小的背景图片合并为一张大图片  原理多个图片放在一个图片中 服务器端只需接收一次 就能得到多个小图片 特点 对简单的背景图设置  降低服务器的压力   过程 导入精灵图  移动背景图片位置：background-position（x,y">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://buterfully.github.io/.assets/%E7%B2%BE%E7%81%B5%E5%9B%BE.jpg">
+<meta property="og:image" content="https://buterfully.github.io/.assets/%E7%B2%BE%E7%81%B5%E5%9B%BE.cal.png">
+<meta property="og:image" content="https://buterfully.github.io/.assets/%E7%B2%BE%E7%81%B5%E5%9B%BE.png">
+<meta property="og:image" content="https://buterfully.github.io/.assets/icommon.page.png">
+<meta property="og:image" content="https://buterfully.github.io/.assets/icomoon.select.png">
+<meta property="og:image" content="https://buterfully.github.io/.assets/icomoon.download.png">
+<meta property="og:image" content="https://buterfully.github.io/.assets/font%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6.png">
+<meta property="og:image" content="https://buterfully.github.io/.assets/font%E6%96%87%E4%BB%B6%E5%A4%B9%E5%AD%98%E6%94%BE.png">
+<meta property="og:image" content="https://buterfully.github.io/.assets/icommoon.display.png">
+<meta property="og:image" content="https://buterfully.github.io/.assets/style.png">
+<meta property="og:image" content="https://buterfully.github.io/.assets/icomoon.imortnew.icons.png">
+<meta property="og:image" content="https://buterfully.github.io/.assets/icomoon.selection.json.png">
+<meta property="article:published_time" content="2024-05-27T15:48:16.804Z">
+<meta property="article:modified_time" content="2024-05-27T15:49:10.480Z">
+<meta property="article:author" content="buterfully">
+<meta property="article:tag" content="none">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://buterfully.github.io/.assets/%E7%B2%BE%E7%81%B5%E5%9B%BE.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">My Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://buterfully.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-web之精灵图与字体图标的使用-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/05/27/web%E4%B9%8B%E7%B2%BE%E7%81%B5%E5%9B%BE%E4%B8%8E%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87%E7%9A%84%E4%BD%BF%E7%94%A8-1/" class="article-date">
+  <time class="dt-published" datetime="2024-05-27T15:48:16.804Z" itemprop="datePublished">2024-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      web之精灵图与字体图标的使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="精灵图"><a href="#精灵图" class="headerlink" title="精灵图"></a>精灵图</h3><p>sprite</p>
+<p>为什么会有精灵图的出现呢？</p>
+<p>​		在一个网页中，我们会用到各式各样的图片</p>
+<ul>
+<li>服务器会频繁地接收和发送请求图片，服务器加载速度会变慢</li>
+</ul>
+<h5 id="实质"><a href="#实质" class="headerlink" title="实质"></a><strong>实质</strong></h5><ul>
+<li>多张小的背景图片合并为一张大图片</li>
+</ul>
+<h5 id="原理"><a href="#原理" class="headerlink" title="原理"></a><strong>原理</strong></h5><p>多个图片放在一个图片中 服务器端只需接收一次 就能得到多个小图片</p>
+<h5 id="特点"><a href="#特点" class="headerlink" title="特点"></a><strong>特点</strong></h5><ul>
+<li><p>对简单的背景图设置</p>
+</li>
+<li><p>降低服务器的压力</p>
+</li>
+</ul>
+<h5 id="过程"><a href="#过程" class="headerlink" title="过程"></a><strong>过程</strong></h5><ul>
+<li><p>导入精灵图</p>
+</li>
+<li><p>移动背景图片位置：background-position（x,y）</p>
+</li>
+<li><p>大图片向左与向上移动 x与y都为负值</p>
+</li>
+</ul>
+<p>使用精灵图的过程就是剪刀（大盒子）裁剪大图片上某一小背景图（小盒子）的过程</p>
+<h5 id="精灵图案例"><a href="#精灵图案例" class="headerlink" title="精灵图案例"></a>精灵图案例</h5><ul>
+<li>精灵图准备：</li>
+</ul>
+<p><img src="/.assets/%E7%B2%BE%E7%81%B5%E5%9B%BE.jpg"></p>
+<ul>
+<li>度量尺寸：</li>
+</ul>
+<p><img src="/.assets/%E7%B2%BE%E7%81%B5%E5%9B%BE.cal.png"></p>
+<ul>
+<li>代码实现：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        span&#123;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            background: url(&quot;精灵图.jpg&quot;) no-repeat;</span><br><span class="line">        &#125;</span><br><span class="line">        .box1&#123;</span><br><span class="line">            width:180px;</span><br><span class="line">            height:216px;</span><br><span class="line">            background-position:-750px 0px;</span><br><span class="line">        &#125;</span><br><span class="line">        .box2&#123;</span><br><span class="line">            width:180px;</span><br><span class="line">            height:216px;</span><br><span class="line">            background-position:-563px 0px;</span><br><span class="line">        &#125;</span><br><span class="line">        .box3&#123;</span><br><span class="line">            width:180px;</span><br><span class="line">            height:216px;</span><br><span class="line">            background-position:-376px 0px;</span><br><span class="line">        &#125;</span><br><span class="line">        .box4&#123;</span><br><span class="line">            width:180px;</span><br><span class="line">            height:216px;</span><br><span class="line">            background-position:-190px 0px;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;span class=&quot;box1&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;box2&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;box3&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;box4&quot;&gt;&lt;/span&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果显示：</li>
+</ul>
+<p><img src="/.assets/%E7%B2%BE%E7%81%B5%E5%9B%BE.png"></p>
+<h3 id="字体图标"><a href="#字体图标" class="headerlink" title="字体图标"></a>字体图标</h3><h5 id="字体图标的产生"><a href="#字体图标的产生" class="headerlink" title="字体图标的产生"></a>字体图标的产生</h5><p>应用：主要用于网页中的一些小图标</p>
+<p><strong>精灵图的缺点</strong></p>
+<ul>
+<li><p>图片本身放大和缩小会出现失真的情况</p>
+</li>
+<li><p>一旦图片切片完成后需要更换写起来十分复杂</p>
+</li>
+</ul>
+<p>一种技术就是字体图标iconfont 它可以为前端工程师提供高效的图标使用方式</p>
+<p>展示的是图标，实质是字体，可以使用字体样式去变换该字体图标</p>
+<h5 id="字体图标的下载与使用"><a href="#字体图标的下载与使用" class="headerlink" title="字体图标的下载与使用"></a>字体图标的下载与使用</h5><ul>
+<li>下载：icomoon字库</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://icomoon.io</span><br></pre></td></tr></table></figure>
+
+<p><img src="/.assets/icommon.page.png"></p>
+<p>选择所想要的图标样式下载，然后进行解压</p>
+<p><img src="/.assets/icomoon.select.png"></p>
+<p>点击右下方的generate Font</p>
+<p><img src="/.assets/icomoon.download.png"></p>
+<p>下载后解压压缩包，将fonts文件夹拷贝一份放在项目的根目录下</p>
+<p>复制fonts文件夹</p>
+<p><img src="/.assets/font%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6.png"></p>
+<p>将fonts文件夹复制到该项目根目录下</p>
+<p><img src="/.assets/font%E6%96%87%E4%BB%B6%E5%A4%B9%E5%AD%98%E6%94%BE.png"></p>
+<p>在css中引入下载的字体样式</p>
+<p>引入方式</p>
+<p>打开style.css文档复制其中的字体样式 引入到.html的css样式中即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@font-face &#123;</span><br><span class="line">  font-family: &#x27;icomoon&#x27;;</span><br><span class="line">  src:  url(&#x27;fonts/icomoon.eot?91jje5&#x27;);</span><br><span class="line">  src:  url(&#x27;fonts/icomoon.eot?91jje5#iefix&#x27;) format(&#x27;embedded-opentype&#x27;),</span><br><span class="line">    url(&#x27;fonts/icomoon.ttf?91jje5&#x27;) format(&#x27;truetype&#x27;),</span><br><span class="line">    url(&#x27;fonts/icomoon.woff?91jje5&#x27;) format(&#x27;woff&#x27;),</span><br><span class="line">    url(&#x27;fonts/icomoon.svg?91jje5#icomoon&#x27;) format(&#x27;svg&#x27;);</span><br><span class="line">  font-weight: normal;</span><br><span class="line">  font-style: normal;</span><br><span class="line">  font-display: block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在demo.html文档中找到所需的图标样式或者再次登录该网址下载的地方，复制后面的样式以某标签的形式加入到html当中，css中为其标签设置font-family: ‘icomoon’;即可引用</p>
+<p><img src="/.assets/icommoon.display.png"></p>
+<p>将后面的那个复制下来 在所处的标签为其设置css属性 设置font-family: ‘icomoon’;即可引用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        @font-face &#123;</span><br><span class="line">            font-family: &#x27;icomoon&#x27;;//此处命名可以发生变化，但在引用时该处的命名应该与引用时命名相同 否则不生效</span><br><span class="line">            src: url(&#x27;fonts/icomoon.eot?91jje5&#x27;);</span><br><span class="line">            src: url(&#x27;fonts/icomoon.eot?91jje5#iefix&#x27;) format(&#x27;embedded-opentype&#x27;),</span><br><span class="line">                url(&#x27;fonts/icomoon.ttf?91jje5&#x27;) format(&#x27;truetype&#x27;),</span><br><span class="line">                url(&#x27;fonts/icomoon.woff?91jje5&#x27;) format(&#x27;woff&#x27;),</span><br><span class="line">                url(&#x27;fonts/icomoon.svg?91jje5#icomoon&#x27;) format(&#x27;svg&#x27;);</span><br><span class="line">            font-weight: normal;</span><br><span class="line">            font-style: normal;</span><br><span class="line">            font-display: block;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        span&#123;</span><br><span class="line">            font-family: &#x27;icomoon&#x27;;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;span&gt;&lt;/span&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>浏览器显示效果呈现</p>
+<p><img src="/.assets/style.png"></p>
+<p>添加新的字体图标</p>
+<p>在icomoon字库中的左上角找到import icons,点击进入</p>
+<p><img src="/.assets/icomoon.imortnew.icons.png"></p>
+<p>然后选择selection.json文档,然后选择需要新加的字体图标后download即可</p>
+<p><img src="/.assets/icomoon.selection.json.png"></p>
+<p>优点：</p>
+<p>字体图标的字体已经在浏览器向服务器请求一次数据时拿到了 后续添加新的字体图标就不需要再次向服务器请求 减少了服务器的压力</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://buterfully.github.io/2024/05/27/web%E4%B9%8B%E7%B2%BE%E7%81%B5%E5%9B%BE%E4%B8%8E%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87%E7%9A%84%E4%BD%BF%E7%94%A8-1/" data-id="clwp59kgh0000qw3agygl5vn2" data-title="web之精灵图与字体图标的使用" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/none/" rel="tag">none</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/05/26/%E5%91%A8%E6%8A%A513/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">周报13</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/none/" rel="tag">none</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/none/" style="font-size: 10px;">none</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">May 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/05/27/web%E4%B9%8B%E7%B2%BE%E7%81%B5%E5%9B%BE%E4%B8%8E%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87%E7%9A%84%E4%BD%BF%E7%94%A8-1/">web之精灵图与字体图标的使用</a>
+          </li>
+        
+          <li>
+            <a href="/2024/05/26/%E5%91%A8%E6%8A%A513/">周报13</a>
+          </li>
+        
+          <li>
+            <a href="/2024/05/20/%E5%91%A8%E6%8A%A512-1/">周报12</a>
+          </li>
+        
+          <li>
+            <a href="/2024/05/20/%E5%91%A8%E6%8A%A5/%E5%91%A8%E6%8A%A512-1/">周报12</a>
+          </li>
+        
+          <li>
+            <a href="/2024/05/13/%E5%91%A8%E6%8A%A511/">周报11</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 buterfully<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
